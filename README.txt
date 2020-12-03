@@ -1,23 +1,32 @@
-こんにちは。
-Hello!
-
 [Eng]
 I created instagram auto unfollow bot using python. 
 It runs with Firefox and ofcourse you need to download Geckodriver.
+Since it is very troublesome to translate everything written in JP, plz use google translate.
+
+  How to use?:
+    1. enter your account username and password in the bottom of the code.
+     → There are 2 places to enter username and only one place to enter password.
+    2. Download Firefox and geckodriver.
 
 [日本語]
 初心者ながら、Pythonでインスタのbotを作ってみました。
 Firefoxを使う前提で作っているので、Geckodriverをインストールした上で、実行してください。
 
+  [使い方]：
+  1. Firefoxと、それをPythonで制御できるようにするためのGeckodriverをインストールしてください。
+  2. コードを何かしらのエディタで開いて、コードの最後の方のusername, passwordと書いてあるところに、ご自身のものを書き入れてください。
+  （usernameの入力箇所は二箇所あります。）
+
   [機能]：
   ・自動でフォローを解除していきます。
+  
   ・核になっているのは、 control_methods というメソッドです。
   　このメソッドに、どの隠れメソッドを起動させるかを指示するコードを書くことで、プログラムを制御することができます。
       イメージ）
       クラスInstaBotをインスタンス化する-> control_methodsを実行 -> 個々のメソッド（control_methodsに書かれているメソッドが実行される）
       
   ・シャドーバンを制御する機能があります
-    フォロー解除をするごとに、今の推定フォロー数とフォロワー数を計算していきます。そして20回ごとにそれがシャドーバンがかかっていないかチェックする仕組みになっています。
+    フォロー解除をするごとに、今の推定フォロー数とフォロワー数を計算していきます。そして20回ごとにそれがシャドーバンがかかっていないかチェックする仕組みになっています。シャドーバンがかかると、そのひどさに応じて自動で数時間停止します。
     
      
   [フォロー解除の2メソッド]：
